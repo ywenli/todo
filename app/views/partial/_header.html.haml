@@ -1,0 +1,10 @@
+%body
+  %header.header
+    %nav.nav
+      %ul.header_menu
+        %li.nav-link username
+        %li.header_menu_title= link_to "kanban", root_path, class: "nav-link"
+        %li
+          %ul.header_menu_inner
+            %li= link_to "リストを作成", "#", class: "nav-link listNew"
+            %li= link_to "サインアウト", "#", class: "nav-link"

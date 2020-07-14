@@ -1,6 +1,7 @@
 version: '3'
 
 volumes:
+  bundle_path:
   db-data:
 
 services:
@@ -10,8 +11,10 @@ services:
       - '3000:3000'
     volumes:
       - '.:/todo'
+      - bundle_path:/bundle
     environment:
       - 'DATABASE_PASSWORD=postgres'
+      - BUNDLE_PATH=/bundle
     tty: true
     stdin_open: true
     depends_on:
