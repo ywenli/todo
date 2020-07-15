@@ -18,7 +18,7 @@
         display: block;
         &.edit_btn {
           max-width: 200px;
-          margin: 0 atuo;
+          margin: 0 auto;
           background: #026aa7;
           padding: 7px;
           border-radius: 10px;
@@ -28,6 +28,9 @@
           &:hover {
             opacity: .7;
           }
+        }
+        &.delete_btn {
+          margin-top: 20px;
         }
       }
     }
