@@ -14,5 +14,5 @@
         = f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "パスワードを入力してください"
       .form-group.text-center
         = f.submit "サインイン", class: "loginBtn"
-      .text-center.signin-guest-btn
+      .signin-guest-btn.text-center
         = link_to 'ゲストログイン', users_guest_sign_in_path, method: :post
