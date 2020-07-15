@@ -3,7 +3,7 @@
     %nav.nav
       %ul.header_menu
         %li.nav-link
-          = current_user.name
+          %li= link_to current_user.name, edit_user_registration_path, class: "nav-link"
           さん
         %li.header_menu_title= link_to "kanban", root_path, class: "nav-link"
         %li
