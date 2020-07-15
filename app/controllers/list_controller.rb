@@ -1,5 +1,5 @@
 class ListController < ApplicationController
-  before_caction :set_list, only: %i(edit update)
+  before_action :set_list, only: %i(edit update)
 
   def new
     @list = List.new
@@ -29,7 +29,7 @@ class ListController < ApplicationController
     def list_params
       params.require(:list).permit(:title).merge(user: current_user)
     end
-    
+
     def set_list
       @list = List.find_by(id: params[:id])
     end
