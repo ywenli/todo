@@ -24,3 +24,5 @@
         = f.password_field :password_confirmation, class:"form-control", placeholder: "パスワードを再度入力してください", autocomplete: "off"
       .text-center
         = f.submit "アカウントを作成", class: "btn submitBtn"
+      .signin-as-guest-btn.text-center
+        = link_to 'ゲストログイン', users_guest_sign_in_path, method: :post
