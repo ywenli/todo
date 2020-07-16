@@ -1,6 +1,6 @@
 .signinPage
   .container
-    %h2.title kanbanにサインイン
+    %h2.title todoにサインイン
     .text-center.m-3 or
     .text-center= render "devise/shared/links"
     = form_with scope: resource, as: resource_name, url: session_path(resource_name), html: { class: "mt-5, new_user" }, local: true do |f|
@@ -14,3 +14,5 @@
         = f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "パスワードを入力してください"
       .form-group.text-center
         = f.submit "サインイン", class: "loginBtn"
+      .signin-as-guest-btn.text-center
+        = link_to 'ゲストログイン', users_guest_sign_in_path, method: :post
